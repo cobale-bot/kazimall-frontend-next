@@ -14,9 +14,7 @@ export default function HomePage() {
     async function fetchTechnicians() {
       try {
         const res = await fetch(`${apiUrl}/technicians`);
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         const data = await res.json();
         setTechnicians(data);
       } catch (err) {
@@ -26,7 +24,6 @@ export default function HomePage() {
         setLoading(false);
       }
     }
-
     fetchTechnicians();
   }, []);
 
