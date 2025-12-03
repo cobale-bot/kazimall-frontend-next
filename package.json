@@ -1,15 +1,17 @@
 {
-  "name": "kazimall-frontend-next",
+  "name": "kazimall-backend",
   "version": "1.0.0",
-  "private": true,
+  "main": "server.js",
+  "type": "module",
+  "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "start": "node server.js",
+    "build": "echo 'No build step needed'"
   },
   "dependencies": {
-    "next": "14.1.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0"
   }
 }
